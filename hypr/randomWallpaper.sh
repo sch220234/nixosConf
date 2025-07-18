@@ -1,10 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Directory containing your wallpapers
-WALLPAPER_DIR="/home/max/Pictures/SavedWallpapers"
+WALLPAPER_DIR="/home/max/Pictures/Wallpaper"
 
 # Pick a random wallpaper from the folder
-WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) | shuf -n 1)
+WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) | shuf -n 1)
 
-# Apply the wallpaper using waypaper
-waypaper --wallpaper "$WALLPAPER"
+swww img "$WALLPAPER" --transition-type wipe --transition-duration 2

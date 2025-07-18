@@ -51,7 +51,6 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
- 
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -91,7 +90,6 @@
       kdePackages.kate
     #  thunderbird
     ];
-    
   };
 
   # Java
@@ -175,45 +173,6 @@
 	steam
 	steam-run
 	alsa-utils
-	alacritty
-	alacritty-theme
-	zed
-	vscodium
-	vscode
-	kdePackages.kate
-	libsForQt5.kate
-	grim
-	grimblast
-	wl-clipboard
-    slurp
-    swappy
-    hyprshot
-    hyprlock
-    hypridle
-    xwayland
-    nixd
-    git-lfs
-    direnv
-    gradle
-    maven
-    kdePackages.kdesu
-    pipewire
-    playerctl
-    qt6.qtwayland
-    font-manager
-    lxappearance
-    gamescope
-    protonup
-    starship
-    btop
-    brave
-    librewolf
-    vesktop
-    minecraftia
-    atlauncher
-    python314
-    pipx
-    python3Packages.pip
   ];
   programs.firefox.enable = true;
 	
@@ -273,11 +232,4 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
 
-
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-      kwallet
-      kwallet-pam
-      kwalletmanager
-      okular
-  ];
 }
